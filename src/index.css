@@ -1,0 +1,23 @@
+@import "tailwindcss";
+
+/* index.css */
+
+/* Animate the bar width */
+@keyframes fill90 {
+  0% { width: 0%; }
+  100% { width: 90%; }
+}
+
+@keyframes fill60 {
+  0% { width: 0%; }
+  100% { width: 60%; }
+}
+
+/* Apply the animation to Tailwind classes */
+.animate-fill90 {
+  animation: fill90 1.5s ease-out forwards;
+}
+
+.animate-fill60 {
+  animation: fill60 1.5s ease-out forwards;
+}
