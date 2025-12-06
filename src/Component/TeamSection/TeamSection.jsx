@@ -47,7 +47,7 @@ export default function TeamSection() {
               transition-all 
               duration-300 
               hover:-translate-y-3 
-              hover:border-orange-500
+              hover:border-[#EA1D25] 
               hover:shadow-[0_0_20px_rgba(255,140,0,0.4)]
             "
           >
@@ -64,7 +64,7 @@ export default function TeamSection() {
                 font-bold 
                 transition 
                 duration-300 
-                group-hover:text-orange-400
+                group-hover:text-orange-600
               ">
                 {m.name}
               </h3>

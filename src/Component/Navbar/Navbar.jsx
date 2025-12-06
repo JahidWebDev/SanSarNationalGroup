@@ -13,6 +13,14 @@ import {
 import { GoArrowUpRight } from "react-icons/go";
 
 const Navbar = () => {
+
+  const scrollToSection = (id) => {
+  const section = document.getElementById(id);
+  if (section) {
+    section.scrollIntoView({ behavior: 'smooth' });
+  }
+};
+
  const [hideTopBar, setHideTopBar] = useState(false);
 const [showTopBarOnHover, setShowTopBarOnHover] = useState(false);
 
@@ -54,14 +62,14 @@ useEffect(() => {
         : "translate-y-0 opacity-100"
     }`}
   >
-    <div className="max-w-[1800px] mx-auto flex justify-between items-center px-6 py-4">
+    <div className="max-w-[1792px] mx-auto flex justify-between items-center px-6 py-4">
       <div className="flex items-center text-sm space-x-8">
         <span className="flex items-center space-x-2">
-          <FaPhoneAlt className="text-orange-500" />
+          <FaPhoneAlt className="text-[#EA1D25] " />
           <p>+880 1302-095901</p>
         </span>
         <span className="flex items-center space-x-2">
-          <FaEnvelope className="text-orange-500" />
+          <FaEnvelope className="text-[#EA1D25] " />
           <p>nationalbd@gmail.com</p>
         </span>
       </div>
@@ -76,62 +84,115 @@ useEffect(() => {
   </div>
 
   {/* ---------- MAIN NAVBAR ---------- */}
-<div
-  className={`w-full bg-[#0f0f14] border-b border-[#1c1c1c]/40 backdrop-blur-xl shadow-lg
+<section>
+  <div 
+  className={` w-full bg-[#0D0D0D] border-b border-[#1c1c1c]/40 backdrop-blur-xl shadow-lg
     transition-all duration-500
-    ${
-      hideTopBar && !showTopBarOnHover
-        ? "-mt-[60px] "  // top bar moves UP (hides)
-        : "mt-0 opacity-100"      // top bar visible
-    }
+    ${hideTopBar && !showTopBarOnHover ? "-mt-[60px]" : "mt-0 opacity-100"}
   `}
 >
+  <div className="max-w-[1440px] mx-auto px-6 py-4 flex justify-between items-center">
 
-    <div className="max-w-[1440px] mx-auto px-6 py-4 flex justify-between items-center">
+    {/* LOGO */}
+    <img src={logo} alt="Logo" className="h-18 object-contain" />
 
-      {/* LOGO */}
-      <img src={logo} alt="Logo" className="h-18 object-contain" />
+    {/* NAV MENU */}
+    <nav className="hidden md:flex space-x-14 text-[15px] font-medium">
+      <button 
+        onClick={() => scrollToSection('home')}
+        className="hover:text-orange-600  transition"
+      >
+        Home
+      </button>
 
-      {/* NAV MENU */}
-      <nav className="hidden md:flex space-x-14 text-[15px] font-medium">
-        <Link to="/" className="hover:text-orange-500 transition">Home</Link>
-        <Link to="/about" className="hover:text-orange-500 transition">About</Link>
+      <button
+        onClick={() => scrollToSection('about')}
+        className="hover:text-orange-500 transition"
+      >
+        About
+      </button>
 
-        {/* Dropdown */}
-        <div className="relative group cursor-pointer">
-          <div className="flex items-center gap-1 hover:text-orange-500 transition">
-            <span>Product</span>
-            <FaChevronDown className="text-xs mt-[2px]" />
-          </div>
-
-          <div className="absolute top-7 left-0 w-48 bg-white text-black shadow-lg rounded-md 
-            opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-            transition-all duration-300 z-50"
-          >
-            <Link to="/building-materials" className="block px-4 py-2 hover:bg-gray-100">Building Materials</Link>
-            <Link to="/engine-oil" className="block px-4 py-2 hover:bg-gray-100">Engine Oil</Link>
-            <Link to="/jaguar-lubricants" className="block px-4 py-2 hover:bg-gray-100">Jaguar Lubricants</Link>
-          </div>
+      {/* Dropdown */}
+      <div  className="relative group cursor-pointer">
+        <div className="flex items-center gap-1 hover:text-orange-500 transition">
+          <span >Product</span>
+          <FaChevronDown className="text-xs mt-[2px]" />
         </div>
 
-        <Link to="/certificate" className="hover:text-orange-500 transition">Certificate</Link>
-        <Link to="/contact" className="hover:text-orange-500 transition">Contact</Link>
-        <Link to="/news" className="hover:text-orange-500 transition">News</Link>
-      </nav>
-
-      {/* RIGHT SIDE BUTTON */}
-      <div className="flex items-center ">
-        <div className="flex items-center text-orange-400 font-semibold cursor-pointer">
-          <span>Jaguar Lubricants Site</span>
-          <GoArrowUpRight className="text-[20px]" />
+        <div className="absolute top-7 left-0 w-48 bg-white text-black shadow-lg rounded-md 
+          opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+          transition-all duration-300 z-50"
+        >
+          <button 
+            onClick={() => scrollToSection('product')} 
+            className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+          >
+            All Product
+          </button>
+          <button 
+            onClick={() => scrollToSection('building-materials')} 
+            className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+          >
+            Building Materials
+          </button>
+          <button 
+            onClick={() => scrollToSection('engine-oil')} 
+            className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+          >
+            Engine Oil
+          </button>
+          <button 
+            onClick={() => scrollToSection('jaguar-lubricants')} 
+            className="block w-full text-left px-4 py-2 hover:bg-gray-100"
+          >
+            Jaguar Lubricants
+          </button>
         </div>
       </div>
-      
-    <div className="bg-[#EA1D25] w-11 h-11 flex items-center justify-center rounded-md shadow cursor-pointer"> <div className="space-y-[5px]"> <div className="w-6 h-[3px] bg-white rounded"></div> <div className="w-6 h-[3px] bg-white rounded"></div> <div className="w-6 h-[3px] bg-white rounded"></div> </div>
+
+      <button
+        onClick={() => scrollToSection('certificate')}
+        className="hover:text-orange-500 transition"
+      >
+        Certificate
+      </button>
+
+      <button
+        onClick={() => scrollToSection('contact')}
+        className="hover:text-orange-500 transition"
+      >
+        Contact
+      </button>
+
+      <button
+        onClick={() => scrollToSection('news')}
+        className="hover:text-orange-500 transition"
+      >
+        News
+      </button>
+    </nav>
+
+    {/* RIGHT SIDE BUTTON */}
+    <div className="flex items-center ">
+      <div className="flex items-center text-orange-400 font-semibold cursor-pointer">
+        <span>Jaguar Lubricants Site</span>
+        <GoArrowUpRight className="text-[20px]" />
+      </div>
     </div>
-    
+
+    {/* MOBILE MENU ICON */}
+    <div className="bg-[#EA1D25] w-11 h-11 flex items-center justify-center rounded-md shadow cursor-pointer">
+      <div className="space-y-[5px]">
+        <div className="w-6 h-[3px] bg-white rounded"></div>
+        <div className="w-6 h-[3px] bg-white rounded"></div>
+        <div className="w-6 h-[3px] bg-white rounded"></div>
+      </div>
+    </div>
+
   </div>
-  </div>
+</div>
+</section>
+
 </header>
 
       {/* ----------------------- REMAINING SECTIONS (unchanged) ----------------------- */}

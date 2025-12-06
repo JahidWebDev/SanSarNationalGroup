@@ -57,11 +57,11 @@ const ProductSection = () => {
       : products.filter((item) => item.category === activeTab);
 
   return (
-    <section className="bg-[#fffcf9] py-60">
+    <section className="bg-[#fffcf9] py-32">
       <div className="max-w-[1440px] mx-auto px-6 text-center">
 
        {/* Top Title */}
-<div className="max-w-[1440px] mx-auto mb-10 text-left">
+<div className="max-w-[1440px] mx-auto mb-8 text-left">
   <h4 className="text-sm tracking-[4px] text-orange-600 font-semibold mb-4">
     OUR PRODUCTS
   </h4>
@@ -79,7 +79,7 @@ const ProductSection = () => {
 
 
         {/* FILTER TABS */}
-        <div className="flex gap-4 justify-end mb-12">
+        <div className="flex gap-4 justify-end mb-2">
           {categories.map((cat) => (
             <button
               key={cat}
@@ -161,7 +161,7 @@ const ProductSection = () => {
                   </h4>
 
                   {/* Title */}
-                  <h3 className="font-bold text-lg text-[#0A1A2F] mb-2 transition-colors duration-500 group-hover:text-orange-600 text-left">
+                  <h3 className="font-bold text-lg text-[#0A1A2F] mb-2 transition-colors duration-500 group-hover:text-[#EA1D25]  text-left">
                     {item.title}
                   </h3>
 
