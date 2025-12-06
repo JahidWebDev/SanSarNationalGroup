@@ -46,35 +46,37 @@ export default function CertificatesSection() {
         <p className="text-gray-600 mb-12 max-w-2xl text-lg">
           Our products undergo extensive third-party evaluations to ensure unmatched quality and absolute confidence.
         </p>
+<div className="grid md:grid-cols-2 gap-8 transition-transform group-hover:drop-shadow-[#EA1D25]">
+  {items.map((item, index) => (
+    <div
+      key={index}
+      className="rounded-2xl w-[600px] p-7 border border-orange-200 bg-white shadow-md 
+                 hover:shadow-xl hover:border-orange-400 transition-all duration-300 group 
+                 cursor-pointer hover:-translate-y-1 hover:scale-105"
+    >
+      <div className="rounded-2xl text-orange-600 w-fit mb-5 transition-transform">
+        {item.type === "image" ? (
+          <img
+            src={item.icon}
+            alt={item.title}
+            className="w-[700px] border-[#c7c7c7] border-2 h-[600px] rounded-md"
+          />
+        ) : (
+          item.icon
+        )}
+      </div>
 
-        <div className="grid md:grid-cols-2 gap-8 transition-transform group-hover:drop-shadow-[#EA1D25]">
-          {items.map((item, index) => (
-            <div
-              key={index}
-              className="rounded-2xl w-[600px] p-7 border border-orange-200 bg-white shadow-md hover:shadow-xl hover:border-orange-400 transition-all duration-300 group"
-            >
-              <div className=" rounded-2xl  text-orange-600 w-fit mb-5 transition-transform">
-                {item.type === "image" ? (
-                  <img
-                    src={item.icon}
-                    alt={item.title}
-                    className="w-[700px]  border-[#c7c7c7] border-2 h-[600px]  rounded-md"
-                  />
-                ) : (
-                  item.icon
-                )}
-              </div>
+      <h3 className="text-xl font-extrabold text-[#0A1A2F] mb-2">
+        {item.title}
+      </h3>
 
-              <h3 className="text-xl font-extrabold text-[#0A1A2F] mb-2">
-                {item.title}
-              </h3>
+      <p className="text-gray-600 leading-relaxed text-base">
+        {item.desc}
+      </p>
+    </div>
+  ))}
+</div>
 
-              <p className="text-gray-600 leading-relaxed text-base">
-                {item.desc}
-              </p>
-            </div>
-          ))}
-        </div>
       </div>
     </section>
   );

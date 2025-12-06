@@ -54,7 +54,7 @@ useEffect(() => {
 >
   {/* ---------- TOP BAR ---------- */}
   <div
-    className={`w-full bg-[#0D0D0D]/80 border-b border-gray-800 backdrop-blur-xl 
+    className={`w-full bg-[#0D0D0D]/90 border-b border-gray-800 backdrop-blur-xl 
     transition-all duration-500
     ${
       hideTopBar && !showTopBarOnHover
@@ -86,7 +86,7 @@ useEffect(() => {
   {/* ---------- MAIN NAVBAR ---------- */}
 <section>
   <div 
-  className={` w-full bg-[#0D0D0D] border-b border-[#1c1c1c]/40 backdrop-blur-xl shadow-lg
+  className={` w-full bg-[#0f0f14] border-b border-[#1c1c1c]/40 backdrop-blur-xl shadow-lg
     transition-all duration-500
     ${hideTopBar && !showTopBarOnHover ? "-mt-[60px]" : "mt-0 opacity-100"}
   `}
@@ -97,84 +97,112 @@ useEffect(() => {
     <img src={logo} alt="Logo" className="h-18 object-contain" />
 
     {/* NAV MENU */}
-    <nav className="hidden md:flex space-x-14 text-[15px] font-medium">
-      <button 
-        onClick={() => scrollToSection('home')}
-        className="hover:text-orange-600  transition"
-      >
-        Home
-      </button>
+  <nav className="hidden md:flex space-x-14 text-[15px] font-medium">
+  {/* Home */}
+  <button
+    onClick={() => scrollToSection('home')}
+    className="relative transition-all duration-300
+               after:content-[''] after:absolute after:left-1/2 after:-bottom-0 after:h-[2px] after:w-0 after:bg-orange-600
+               after:transition-all after:duration-300
+               hover:after:left-0 hover:after:w-full cursor-pointer hover:text-[#EA1D25] "
+  >
+    Home
+  </button>
 
-      <button
-        onClick={() => scrollToSection('about')}
-        className="hover:text-orange-500 transition"
-      >
-        About
-      </button>
+  {/* About */}
+  <button
+    onClick={() => scrollToSection('about')}
+    className="relative transition-all duration-300
+               after:content-[''] after:absolute after:left-1/2 after:-bottom-0 after:h-[2px] after:w-0 after:bg-orange-600
+               after:transition-all after:duration-300
+               hover:after:left-0 hover:after:w-full cursor-pointer hover:text-[#EA1D25]"
+  >
+    About
+  </button>
 
-      {/* Dropdown */}
-      <div  className="relative group cursor-pointer">
-        <div className="flex items-center gap-1 hover:text-orange-500 transition">
-          <span >Product</span>
-          <FaChevronDown className="text-xs mt-[2px]" />
-        </div>
+  {/* Dropdown */}
+  <div className="relative group cursor-pointer">
+    <div className="flex items-center gap-1 relative
+                    after:content-[''] after:absolute after:left-1/2 after:-bottom-0 after:h-[2px] after:w-0 after:bg-orange-600
+                    after:transition-all after:duration-300
+                    group-hover:after:left-0 group-hover:after:w-full hover:text-[#EA1D25]">
+      <span>Product</span>
+      <FaChevronDown className="text-xs mt-[2px]" />
+    </div>
 
-        <div className="absolute top-7 left-0 w-48 bg-white text-black shadow-lg rounded-md 
-          opacity-0 invisible group-hover:opacity-100 group-hover:visible 
-          transition-all duration-300 z-50"
-        >
-          <button 
-            onClick={() => scrollToSection('product')} 
-            className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-          >
-            All Product
-          </button>
-          <button 
-            onClick={() => scrollToSection('building-materials')} 
-            className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-          >
-            Building Materials
-          </button>
-          <button 
-            onClick={() => scrollToSection('engine-oil')} 
-            className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-          >
-            Engine Oil
-          </button>
-          <button 
-            onClick={() => scrollToSection('jaguar-lubricants')} 
-            className="block w-full text-left px-4 py-2 hover:bg-gray-100"
-          >
-            Jaguar Lubricants
-          </button>
-        </div>
-      </div>
+   <div 
+  className="absolute top-7 left-0 w-48 bg-orange-600/80 backdrop-blur-md text-white shadow-lg rounded-md 
+             opacity-0 invisible group-hover:opacity-100 group-hover:visible 
+             transition-all duration-300 z-50"
+>
+  <button 
+    onClick={() => scrollToSection('product')} 
+    className="block w-full text-left px-4 py-2 hover:text-black hover:bg-[#EA1D25]/80 transition-colors"
+  >
+    All Product
+  </button>
+  <button 
+    onClick={() => scrollToSection('building-materials')} 
+    className="block w-full text-left px-4 py-2 hover:text-black hover:bg-[#EA1D25]/80 transition-colors"
+  >
+    Building Materials
+  </button>
+  <button 
+    onClick={() => scrollToSection('engine-oil')} 
+    className="block w-full text-left px-4 py-2 hover:text-black hover:bg-[#EA1D25]/80 transition-colors"
+  >
+    Engine Oil
+  </button>
+  <button 
+    onClick={() => scrollToSection('jaguar-lubricants')} 
+    className="block w-full text-left px-4 py-2 hover:text-black hover:bg-[#EA1D25]/80 transition-colors"
+  >
+    Jaguar Lubricants
+  </button>
+</div>
 
-      <button
-        onClick={() => scrollToSection('certificate')}
-        className="hover:text-orange-500 transition"
-      >
-        Certificate
-      </button>
 
-      <button
-        onClick={() => scrollToSection('contact')}
-        className="hover:text-orange-500 transition"
-      >
-        Contact
-      </button>
+  </div>
 
-      <button
-        onClick={() => scrollToSection('news')}
-        className="hover:text-orange-500 transition"
-      >
-        News
-      </button>
-    </nav>
+  {/* Certificate */}
+  <button
+    onClick={() => scrollToSection('certificate')}
+    className="relative transition-all duration-300
+               after:content-[''] after:absolute after:left-1/2 after:-bottom-0 after:h-[2px] after:w-0 after:bg-orange-600
+               after:transition-all after:duration-300
+               hover:after:left-0 hover:after:w-full cursor-pointer  hover:text-[#EA1D25]"
+  >
+    Certificate
+  </button>
+
+  {/* Contact */}
+  <button
+    onClick={() => scrollToSection('contact')}
+    className="relative transition-all duration-300
+               after:content-[''] after:absolute after:left-1/2 after:-bottom-0 after:h-[2px] after:w-0 after:bg-orange-600
+               after:transition-all after:duration-300
+               hover:after:left-0 hover:after:w-full cursor-pointer  hover:text-[#EA1D25]"
+  >
+    Contact
+  </button>
+
+  {/* News */}
+  <button
+    onClick={() => scrollToSection('news')}
+    className="relative transition-all duration-300
+               after:content-[''] after:absolute after:left-1/2 after:-bottom-0 after:h-[2px] after:w-0 after:bg-orange-600
+               after:transition-all after:duration-300
+               hover:after:left-0 hover:after:w-full cursor-pointer  hover:text-[#EA1D25]"
+  >
+    News
+  </button>
+</nav>
+
+
 
     {/* RIGHT SIDE BUTTON */}
     <div className="flex items-center ">
-      <div className="flex items-center text-orange-400 font-semibold cursor-pointer">
+      <div className="flex items-center text-orange-500 font-semibold cursor-pointer">
         <span>Jaguar Lubricants Site</span>
         <GoArrowUpRight className="text-[20px]" />
       </div>
@@ -225,11 +253,11 @@ useEffect(() => {
 
       {/* Buttons */}
       <div className="flex items-center gap-4">
-        <button className="bg-orange-600 text-white px-6 py-3 rounded-xl shadow-md hover:bg-orange-700 transition">
+        <button className="bg-orange-600 cursor-pointer text-white px-6 py-3 rounded-xl shadow-md hover:bg-orange-700 transition">
           Explore Products →
         </button>
 
-        <button className="border border-gray-600 px-6 py-3 rounded-xl hover:bg-white/10 transition">
+        <button className="border cursor-pointer border-gray-600 px-6 py-3 rounded-xl hover:bg-white/10 transition">
           Our Story
         </button>
       </div>

@@ -48,7 +48,7 @@ export default function TeamSection() {
               duration-300 
               hover:-translate-y-3 
               hover:border-[#EA1D25] 
-              hover:shadow-[0_0_20px_rgba(255,140,0,0.4)]
+              hover:shadow-[0_0_20px_rgba(255,140,0,0.4)] cursor-pointer
             "
           >
             <img

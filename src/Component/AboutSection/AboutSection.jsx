@@ -53,33 +53,34 @@ const AboutSection = () => {
   {/* TABS */}
      <section className="text-left py-4">
       {/* Tabs */}
-      <div className="flex gap-10 text-lg font-semibold mb-10 flex-wrap">
-        {tabs.map((tab) => (
-          <button
-            key={tab.id}
-            onClick={() => setActiveTab(tab.id)}
-            className="relative pb-2 group"
-          >
-            {/* Label */}
-            <span
-              className={`transition-colors duration-300 ${
-                activeTab === tab.id
-                  ? "text-"
-                  : "text-gray-600 group-hover:text-orange-600"
-              }`}
-            >
-              {tab.label}
-            </span>
+ <div className="flex gap-10 text-lg font-semibold mb-10 flex-wrap">
+  {tabs.map((tab) => (
+    <button
+      key={tab.id}
+      onClick={() => setActiveTab(tab.id)}
+      className="relative pb-2 group cursor-pointer"
+    >
+      {/* Label */}
+      <span
+        className={`transition-colors duration-300 ${
+          activeTab === tab.id
+            ? "text-black"
+            : "text-gray-600 group-hover:text-orange-600"
+        }`}
+      >
+        {tab.label}
+      </span>
 
-            {/* Underline */}
-            <span
-              className={`absolute left-0 bottom-0 h-[2px] bg-orange-600 transition-all duration-300
-              ${activeTab === tab.id ? "w-full" : "w-0 group-hover:w-full"}`}
-            ></span>
-            <span className="absolute left-0 -bottom-[2px] h-[2px] w-full bg-gray-200"></span>
-          </button>
-        ))}
-      </div>
+      {/* Underline */}
+      <span
+        className={`absolute left-0 bottom-0 h-[2px] bg-orange-600 transition-all duration-300
+        ${activeTab === tab.id ? "w-full" : "w-0 group-hover:w-full"}`}
+      ></span>
+      <span className="absolute left-0 -bottom-[2px] h-[2px] w-full bg-gray-200"></span>
+    </button>
+  ))}
+</div>
+
 
       {/* CONTENT (with fade + slide animation) */}
       <div
@@ -113,7 +114,7 @@ const AboutSection = () => {
   </div>
 
   {/* BUTTON */}
-  <button className="px-8 py-3 bg-black text-white rounded-xl font-medium hover:bg-[#EA1D25] hover:text-black transition duration-300">
+  <button className="px-8 cursor-pointer py-3 bg-black text-white rounded-xl font-medium hover:bg-[#EA1D25] hover:text-black transition duration-300">
             Read More →
           </button>
 

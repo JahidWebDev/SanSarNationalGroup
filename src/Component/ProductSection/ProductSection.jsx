@@ -57,7 +57,7 @@ const ProductSection = () => {
       : products.filter((item) => item.category === activeTab);
 
   return (
-    <section className="bg-[#fffcf9] py-32">
+    <section className="bg-[#fffcf9] py-37">
       <div className="max-w-[1440px] mx-auto px-6 text-center">
 
        {/* Top Title */}
@@ -79,25 +79,26 @@ const ProductSection = () => {
 
 
         {/* FILTER TABS */}
-        <div className="flex gap-4 justify-end mb-2">
-          {categories.map((cat) => (
-            <button
-              key={cat}
-              onClick={() => setActiveTab(cat)}
-              className={`
-                px-6 py-2 rounded-[6px] border 
-                transition-all duration-300 text-sm font-semibold
-                ${
-                  activeTab === cat
-                    ? "bg-orange-600 text-white border-orange-600 shadow-md"
-                    : "bg-white text-gray-700 border-gray-300 hover:bg-gray-200"
-                }
-              `}
-            >
-              {cat}
-            </button>
-          ))}
-        </div>
+      <div className="flex mb-7 gap-4 justify-end">
+  {categories.map((cat) => (
+    <button
+      key={cat}
+      onClick={() => setActiveTab(cat)}
+      className={`
+        px-6 py-2 rounded-[6px] border 
+        transition-all duration-300 text-sm font-semibold
+        cursor-pointer
+        ${
+          activeTab === cat
+            ? "bg-orange-600 text-white border-orange-600 shadow-md"
+            : "bg-white text-gray-700 border-gray-300 hover:bg-gray-200"
+        }
+      `}
+    >
+      {cat}
+    </button>
+  ))}
+</div>
 
         {/* PRODUCT GRID */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">

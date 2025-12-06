@@ -35,7 +35,7 @@ const Construction = () => {
       </p>
 
       {/* BUTTON */}
-      <button className="px-8 py-3 mb-2 bg-black text-white rounded-xl font-medium hover:bg-[#EA1D25] hover:text-black transition duration-300">
+      <button className="px-8 cursor-pointer py-3 mb-2 bg-black text-white rounded-xl font-medium hover:bg-[#EA1D25] hover:text-black transition duration-300">
         Read More →
       </button>
     </div>

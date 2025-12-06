@@ -6,6 +6,7 @@ import AboutSection from "./Component/AboutSection/AboutSection";
 import ProductSection from "./Component/ProductSection/ProductSection";
 import TeamSection from "./Component/TeamSection/TeamSection";
 import CertificatesSection from "./Component/CertificatesSection/CertificatesSection";
+import ContactSection from "./Component/ContactSection/ContactSection";
 
 function App() {
   // Smooth scroll function
@@ -46,6 +47,9 @@ function App() {
       {/* Certificate Section */}
       <section id="certificate">
         <CertificatesSection />
+      </section>
+      <section id="contact">
+        <ContactSection />
       </section>
     </div>
   );
