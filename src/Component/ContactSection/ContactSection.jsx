@@ -1,8 +1,20 @@
 import React from "react";
 import { FaPaperPlane } from "react-icons/fa";
+import img1 from "../../Images/organization-logo1.png"
+import img2 from "../../Images/organization-logo2.png"
+import img3 from "../../Images/organization-logo3.png"
+import img4 from "../../Images/organization-logo4.png"
+import img5 from "../../Images/organization-logo5.png"
+import img6 from "../../Images/organization-logo6.png"
+import img7 from "../../Images/organization-logo7.png"
+import img8 from "../../Images/organization-logo8.png"
+
+
 const ContactSection = () => {
+
   return (
-    <section id="contact" className="w-full bg-[#0f0f14]  py-40">
+   <section>
+     <section  className="w-full bg-[#0f0f14]  py-40">
       <div className="max-w-[1440px] mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
 {/* LEFT FORM */}
 <div className="bg-white shadow-xl rounded-xl p-10 min-h-[420px]">
@@ -82,8 +94,34 @@ const ContactSection = () => {
 </div>
 
 
+
       </div>
+ 
     </section>
+         <section className="py-16 bg-[#fffcf9]">
+  <div className="max-w-[1200px] mx-auto text-center px-6">
+    
+    {/* Heading */}
+    <h1 className="text-2xl md:text-3xl font-bold mb-10">
+      Recognized & Certified by GOVT & other Prestigious Organization
+    </h1>
+
+    {/* Logo Images */}
+    <div className="flex flex-wrap justify-center items-center gap-6 md:gap-10">
+      <img src={img1} alt="" className="h-16 object-contain" />
+      <img src={img2} alt="" className="h-16 object-contain" />
+      <img src={img3} alt="" className="h-16 object-contain" />
+      <img src={img4} alt="" className="h-16 object-contain" />
+      <img src={img5}alt="" className="h-16 object-contain" />
+      <img src={img6} alt="" className="h-16 object-contain" />
+      <img src={img7} alt="" className="h-16 object-contain" />
+      <img src={img8} alt="" className="h-16 object-contain" />
+    </div>
+
+  </div>
+</section>
+   </section>
+    
   );
 };
 

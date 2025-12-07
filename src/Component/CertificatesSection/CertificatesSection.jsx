@@ -33,7 +33,7 @@ export default function CertificatesSection() {
   ];
 
   return (
-    <section  className="w-full py-35 bg-white">
+    <section  className="w-full py-35 bg-[#fffcf9]">
       <div className="max-w-7xl mx-auto px-6">
         <p className="text-sm tracking-[4px] font-semibold text-orange-600 mb-4">
           UNWAVERING STANDARDS
