@@ -54,7 +54,7 @@ useEffect(() => {
 >
   {/* ---------- TOP BAR ---------- */}
   <div
-    className={`w-full bg-[#0D0D0D]/90 border-b border-gray-800 backdrop-blur-xl 
+    className={`w-full bg-[#0D0D0D]/90 backdrop-blur-xl 
     transition-all duration-500
     ${
       hideTopBar && !showTopBarOnHover
@@ -86,7 +86,7 @@ useEffect(() => {
   {/* ---------- MAIN NAVBAR ---------- */}
 <section>
   <div 
-  className={` w-full bg-[#0f0f14] border-b border-[#1c1c1c]/40 backdrop-blur-xl shadow-lg
+  className={` w-full bg-[#0f0f14] border-b border-gray-800 backdrop-blur-xl shadow-lg
     transition-all duration-500
     ${hideTopBar && !showTopBarOnHover ? "-mt-[60px]" : "mt-0 opacity-100"}
   `}
@@ -225,7 +225,7 @@ useEffect(() => {
 
       {/* ----------------------- REMAINING SECTIONS (unchanged) ----------------------- */}
       {/* HERO + CARDS (your original code kept exactly same) */}
-<section className="bg-[#0f0f14] text-white pt-[280px] pb-[130px]">
+<section className="bg-[#0f0f14]  text-white pt-[260px] pb-[180px]">
   <div className="max-w-[1440px] h-full mx-auto flex flex-col md:flex-row items-center gap-12 px-6">
 
     {/* LEFT SIDE */}
@@ -273,7 +273,7 @@ useEffect(() => {
   </div>
 </section>
    
-<section className="bg-[#0f0f14] pt-20 pb-70 text-white">
+<section className="bg-[#0f0f14] pt-20 pb-30 text-white">
   <div className="max-w-[1440px] mx-auto px-6 text-left">
     
     {/* Section Header */}
