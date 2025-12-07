@@ -72,32 +72,33 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* ➤ Quick Links */}
-        <div className="w-full text-left ml-[30px]">
-          <h3 className="text-2xl md:text-3xl font-semibold">Quick Links</h3>
-          <div className="w-20 h-1 bg-orange-600 mt-2 mb-6"></div>
+      {/* ➤ Quick Links */}
+<div className="w-full md:w-[280px] text-left ml-35">
+  <h3 className="text-2xl md:text-3xl font-semibold">Quick Links</h3>
+  <div className="w-20 h-1 bg-orange-600 mt-2 mb-6"></div>
 
-          <ul className="space-y-4 text-gray-300 text-base md:text-lg">
-            <li className="hover:text-orange-500 cursor-pointer">About Us</li>
-            <li className="hover:text-orange-500 cursor-pointer">Team</li>
-            <li className="hover:text-orange-500 cursor-pointer">Testimonials</li>
-            <li className="hover:text-orange-500 cursor-pointer">Contact Us</li>
-          </ul>
-        </div>
+  <ul className="space-y-4 text-gray-300 text-base md:text-lg">
+    <li className="hover:text-orange-500 cursor-pointer">About Us</li>
+    <li className="hover:text-orange-500 cursor-pointer">Team</li>
+    <li className="hover:text-orange-500 cursor-pointer">Testimonials</li>
+    <li className="hover:text-orange-500 cursor-pointer">Contact Us</li>
+  </ul>
+</div>
 
-        {/* ➤ Our Services */}
-        <div className="w-full text-left ml-[30px]">
-          <h3 className="text-2xl md:text-3xl font-semibold">Our Services</h3>
-          <div className="w-20 h-1 bg-orange-600 mt-2 mb-6"></div>
+{/* ➤ Our Services */}
+<div className="w-full md:w-[300px] text-left ml-35">
+  <h3 className="text-2xl md:text-3xl font-semibold">Our Services</h3>
+  <div className="w-20 h-1 bg-orange-600 mt-2 mb-6"></div>
 
-          <ul className="space-y-4 text-gray-300 text-base md:text-lg">
-            <li className="hover:text-orange-500 cursor-pointer">Construction</li>
-            <li className="hover:text-orange-500 cursor-pointer">Architecture</li>
-            <li className="hover:text-orange-500 cursor-pointer">Interior</li>
-            <li className="hover:text-orange-500 cursor-pointer">Building Design</li>
-            <li className="hover:text-orange-500 cursor-pointer">Real Estate</li>
-          </ul>
-        </div>
+  <ul className="space-y-4 text-gray-300 text-base md:text-lg">
+    <li className="hover:text-orange-500 cursor-pointer">Construction</li>
+    <li className="hover:text-orange-500 cursor-pointer">Architecture</li>
+    <li className="hover:text-orange-500 cursor-pointer">Interior</li>
+    <li className="hover:text-orange-500 cursor-pointer">Building Design</li>
+    <li className="hover:text-orange-500 cursor-pointer">Real Estate</li>
+  </ul>
+</div>
+
 
         {/* ➤ Map + Office */}
         <div>
